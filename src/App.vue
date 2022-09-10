@@ -1,14 +1,15 @@
 <template>
+  <Navbar/>
   <Dash msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
 import Dash from './components/Dash.vue'
-
+import Navbar from './components/Navbar.vue'
 export default {
   name: 'App',
   components: {
-    Dash
+    Dash, Navbar
   }
 }
 </script>
@@ -20,6 +21,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 </style>

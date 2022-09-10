@@ -1,7 +1,5 @@
 <template>
-  <div class="hello">
-    <h1>Videos </h1>
-
+  <div class="care">
     <Carousel/>
   </div>
 </template>
@@ -40,4 +38,7 @@ a {
   height: 150px;
   width: 1;
 } */
+.care{
+  margin: 50px;
+}
 </style>

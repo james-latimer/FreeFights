@@ -1,5 +1,5 @@
 <template>
-  <div class="carousel">
+  <div class="carousel rounded border border-light">
     <vueper-slides  class="no-shadow"
   :visible-slides="3"
   slide-multiple
@@ -13,11 +13,9 @@
         :image="slide.image"
         :title="slide.title"
         :content="slide.content"
-        :video="slide.video" />
+        :video="slide.video" @click="hi()" />
     </vueper-slides>
-    <button class="btn bg-primary">
-      James
-    </button>
+    
   </div>
 </template>
 
@@ -29,7 +27,7 @@ import 'vueperslides/dist/vueperslides.css'
 
 export default {
   components: {VueperSlides, VueperSlide},
-  name: 'HelloWorld',
+  name: 'Carousel',
   data() {
     return {
      slides: [
@@ -73,9 +71,42 @@ export default {
         allow: 'accelerometer; encrypted-media; gyroscope;'  
       }
     }
-  }
+  },{
+    video: {
+      url: 'https://www.youtube.com/embed/yy2SlIVhBdo',
+      props: {
+        allow: 'accelerometer; encrypted-media; gyroscope;'  
+      }
+    }
+  },{
+    video: {
+      url: 'https://www.youtube.com/embed/ueryVdb0IfM',
+      props: {
+        allow: 'accelerometer; encrypted-media; gyroscope;'  
+      }
+    }
+  },{
+    video: {
+      url: 'https://www.youtube.com/embed/24B6AEow9oY',
+      props: {
+        allow: 'accelerometer; encrypted-media; gyroscope;'  
+      }
+    }
+  },{
+    video: {
+      url: 'https://www.youtube.com/embed/jD-vCU31y00',
+      props: {
+        allow: 'accelerometer; encrypted-media; gyroscope;'  
+      }
+    }
+  },
 ]
     }
+  },
+  methods: {
+  hi(){
+console.log(3)
+  }
   }
 }
 </script>
@@ -88,12 +119,14 @@ export default {
 }
 .carousel {
   margin: auto;
-  padding-top: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-top: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
   width: 75%;
   height: 75;
-  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  background-color: #ffffff;
 }
 h1 {
   font-weight: 500;
